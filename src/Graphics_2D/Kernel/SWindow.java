@@ -1,39 +1,41 @@
+//Window class
+//Draws windows and frames
 package Graphics_2D.Kernel;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 public class SWindow
 {
-    int width;
-    int height;
-    String name;
-    String id;
-    Frame frame;
-    SCanvas sCanvas;
-    public SWindow(int width, int height, String name)
+    private int width;
+    private int height;
+    private String name;
+    private String id;
+    private Frame frame;
+    private SCanvas sCanvas;
+    protected SWindow(int width, int height, String name)
     {
         this.width=width;
         this.height=height;
         this.name=name;
         paint();
     }
-    public void setId(String id)
+    protected void setId(String id)
     {
         this.id = id;
     }
-    public String getId()
+    protected String getId()
     {
         return id;
     }
-    public SCanvas getSCanvas()
+    protected SCanvas getSCanvas()
     {
         return sCanvas;
     }
-    public Frame getFrame()
+    protected Frame getFrame()
     {
         return frame;
     }
-    public void paint()
+    protected void paint()
     {
         frame = new Frame(name);
         frame.setSize(width,height);

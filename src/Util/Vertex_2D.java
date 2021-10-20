@@ -1,8 +1,9 @@
-package Graphics_2D;
+//Vertex class
+package Util;
 public class Vertex_2D
 {
-    int x;
-    int y;
+    private int x;
+    private int y;
     public Vertex_2D(int x, int y)
     {
         this.x=x;

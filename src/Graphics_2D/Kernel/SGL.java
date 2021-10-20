@@ -1,10 +1,13 @@
+//User interface class
+//Connects all classes in this package
+//Used to import
 package Graphics_2D.Kernel;
 import java.awt.*;
 import java.util.ArrayList;
 public class SGL
 {
-    static int selectedWindow;
-    static ArrayList<SWindow> windows = new ArrayList();
+    private static int selectedWindow;
+    private static ArrayList<SWindow> windows = new ArrayList();
     public static void addWindow(int x, int y, String nameAndId)
     {
         windows.add(new SWindow(x,y,nameAndId));
@@ -26,7 +29,6 @@ public class SGL
                 return;
             }
         System.out.println("Cant find window with this id");
-        return;
     }
     public static void deleteWidow()
     {
@@ -41,7 +43,6 @@ public class SGL
                 return;
             }
         System.out.println("Cant find window with this id");
-        return;
     }
     public static void setPixel(int x, int y)
     {

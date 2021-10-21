@@ -2,7 +2,6 @@
 //Draws triangles without creating instance of class
 package Graphics_2D;
 import Util.Vertex_2D;
-
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -33,7 +32,7 @@ public class Triangle
         for(int i=vertexes.get(2).getY();i>vertexes.get(1).getY();i--)
         {
             int currentX12 = Math.round((i-vertexes.get(2).getY())*coefficient12)+vertexes.get(2).getX();
-            int currentX20 = (int)Math.round((i-vertexes.get(2).getY())*coefficient02)+vertexes.get(2).getX();
+            int currentX20 = Math.round((i-vertexes.get(2).getY())*coefficient02)+vertexes.get(2).getX();
             SLine.drawSLine(currentX12,i,currentX20,i,fillColor);
         }
         //Drawing borders
@@ -46,7 +45,7 @@ public class Triangle
         @Override
         public int compare(Vertex_2D o1, Vertex_2D o2)
         {
-            return o1.getY().compareTo(o2.getY());
+            return new Integer(o1.getY()).compareTo(o2.getY());
         }
     };
 }

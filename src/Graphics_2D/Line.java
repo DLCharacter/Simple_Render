@@ -20,7 +20,7 @@ public class Line
             y1 = y2-y1;
             y2 -= y1;
         }
-        if(Math.abs(x2-x1)>Math.abs(y2-y1))
+        if(isXAxisMain)
         {
             double errorMax;
             double currentError = 0;

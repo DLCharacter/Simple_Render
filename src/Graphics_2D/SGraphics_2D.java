@@ -3,7 +3,6 @@
 //Used to import
 package Graphics_2D;
 import Util.Vertex_2D;
-
 import java.awt.*;
 public class SGraphics_2D
 {
